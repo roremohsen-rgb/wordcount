@@ -16,3 +16,18 @@ fi
 
 echo "PASS: $output"
 rm -f "$tmpfile"
+
+tmpfile=$(mktemp)
+: > "$tmpfile"
+
+output=$(bash wordcount.sh "$tmpfile")
+expected="0 lines, 0 words, 0 chars"
+
+if [ "$output" != "$expected" ]; then
+    echo "FAIL: expected '$expected', got '$output'"
+    rm -f "$tmpfile"
+    exit 1
+fi
+
+echo "PASS: $output"
+rm -f "$tmpfile"
