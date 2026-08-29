@@ -8,7 +8,7 @@ A tiny CLI that counts lines, words, and characters in a text file — like a mi
 bash wordcount.sh path/to/file.txt
 ```
 
-This will output the number of lines, words, and charcters in the file.
+This will output the number of lines, words, and characters in the file.
 
 ## Tests
 
